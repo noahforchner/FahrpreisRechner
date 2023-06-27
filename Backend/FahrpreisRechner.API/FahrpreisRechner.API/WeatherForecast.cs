@@ -1,4 +1,4 @@
-namespace Fahrpreisrechner.Core;
+namespace FahrpreisRechner.API;
 
 public class WeatherForecast
 {

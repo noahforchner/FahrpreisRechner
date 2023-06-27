@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core.csproj": {}
+    "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.API\\FahrpreisRechner.API\\FahrpreisRechner.API.csproj": {}
   },
   "projects": {
-    "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core.csproj": {
+    "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.API\\FahrpreisRechner.API\\FahrpreisRechner.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core.csproj",
-        "projectName": "Fahrpreisrechner.Core",
-        "projectPath": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core.csproj",
+        "projectUniqueName": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.API\\FahrpreisRechner.API\\FahrpreisRechner.API.csproj",
+        "projectName": "FahrpreisRechner.API",
+        "projectPath": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.API\\FahrpreisRechner.API\\FahrpreisRechner.API.csproj",
         "packagesPath": "C:\\Users\\jm\\.nuget\\packages\\",
-        "outputPath": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\Fahrpreisrechner.Core\\Fahrpreisrechner.Core\\obj\\",
+        "outputPath": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.API\\FahrpreisRechner.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jm\\AppData\\Roaming\\NuGet\\NuGet.Config",

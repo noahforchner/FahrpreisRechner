@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Fahrpreisrechner.Core")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("FahrpreisRechner.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Fahrpreisrechner.Core")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Fahrpreisrechner.Core")]
+[assembly: System.Reflection.AssemblyProductAttribute("FahrpreisRechner.API")]
+[assembly: System.Reflection.AssemblyTitleAttribute("FahrpreisRechner.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
