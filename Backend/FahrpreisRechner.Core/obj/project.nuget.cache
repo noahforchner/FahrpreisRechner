@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "GQ7cVvIezuzjcQ0R1/mAzhLqbRtAFizCuKmavmsoIXTa/GVkKL+Za8oyJwn67atNjlh7EZFjE3oOYepao7Yfww==",
+  "success": true,
+  "projectFilePath": "C:\\HsCode\\Repos\\FahrpreisRechner\\Backend\\FahrpreisRechner.Core\\FahrpreisRechner.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jm\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.21.0\\microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.21.0\\microsoft.identitymodel.jsonwebtokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\microsoft.identitymodel.logging\\6.21.0\\microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.21.0\\microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.21.0\\system.identitymodel.tokens.jwt.6.21.0.nupkg.sha512",
+    "C:\\Users\\jm\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

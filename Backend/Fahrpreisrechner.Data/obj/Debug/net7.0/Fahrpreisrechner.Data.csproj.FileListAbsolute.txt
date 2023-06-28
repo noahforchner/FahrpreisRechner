@@ -1,0 +1,15 @@
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\Fahrpreisrechner.Data.deps.json
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\Fahrpreisrechner.Data.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\Fahrpreisrechner.Data.pdb
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\FahrpreisRechner.Core.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\FahrpreisRechner.Core.pdb
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.csproj.AssemblyReference.cache
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.AssemblyInfoInputs.cache
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.AssemblyInfo.cs
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.csproj.CoreCompileInputs.cache
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.csproj.CopyComplete
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\refint\Fahrpreisrechner.Data.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.pdb
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\ref\Fahrpreisrechner.Data.dll

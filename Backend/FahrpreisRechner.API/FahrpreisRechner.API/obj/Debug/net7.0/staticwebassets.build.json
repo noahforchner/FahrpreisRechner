@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KUZRmfN0r+q+OomHjDrwmMDS5z2neBLyeVHFcBn1aO8=",
+  "Source": "FahrpreisRechner.API",
+  "BasePath": "_content/FahrpreisRechner.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
