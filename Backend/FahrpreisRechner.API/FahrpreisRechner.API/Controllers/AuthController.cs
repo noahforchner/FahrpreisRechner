@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FahrpreisRechner.Core.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FahrpreisRechner.API.Controllers;
 
@@ -7,9 +8,12 @@ namespace FahrpreisRechner.API.Controllers;
 [Route("api/v1/auth")]
 public class AuthController : ControllerBase
 {
-  //[HttpGet]
-  //public async Task<ActionResult> (Guid id)
-  //{
+  private readonly IJwtService _jwtService;
+  private readonly IUserService _userService;
 
-  //}
+  public AuthController(IJwtService jwtService, IUserService userService)
+  {
+    _jwtService = jwtService;
+    _userService = userService;
+  }
 }
