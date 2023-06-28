@@ -6,7 +6,7 @@ public class UserContext : DbContext
 {
   public DbSet<User> Users { get; set; }
 
-  public UserContext(DbContextOptions options) : base(options)
+  public UserContext(DbContextOptions<UserContext> options) : base(options)
   {
   }
 

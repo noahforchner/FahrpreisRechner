@@ -13,3 +13,5 @@ C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\
 C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\refint\Fahrpreisrechner.Data.dll
 C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.pdb
 C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\ref\Fahrpreisrechner.Data.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\bin\Debug\net7.0\Fahrpreisrechner.Data.runtimeconfig.json
+C:\HsCode\Repos\FahrpreisRechner\Backend\Fahrpreisrechner.Data\obj\Debug\net7.0\Fahrpreisrechner.Data.genruntimeconfig.cache

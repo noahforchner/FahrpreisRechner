@@ -73,3 +73,8 @@ C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.A
 C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Fahrpreisrechner.Data.dll
 C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\FahrpreisRechner.Core.pdb
 C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Fahrpreisrechner.Data.pdb
+C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Humanizer.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\HsCode\Repos\FahrpreisRechner\Backend\FahrpreisRechner.API\FahrpreisRechner.API\bin\Debug\net7.0\System.CodeDom.dll
