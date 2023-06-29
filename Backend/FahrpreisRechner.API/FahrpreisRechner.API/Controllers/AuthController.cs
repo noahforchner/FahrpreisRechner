@@ -16,4 +16,10 @@ public class AuthController : ControllerBase
     _jwtService = jwtService;
     _userService = userService;
   }
+
+  [HttpPost("register")]
+  public ActionResult Register()
+  {
+    return Ok();
+  }
 }
