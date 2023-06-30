@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react';
 import Background from '../assets/background2.0.png';
 
 function ErrorPage() {
