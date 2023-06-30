@@ -52,10 +52,8 @@ const LoginMaske = () => {
           <Typography sx={{ textAlign: "center", mt: 2 }} variant="h5">
             Willkommen bei SooTec
           </Typography>
-          <Divider sx={{ width: "63%", mt: 4 }}></Divider>
-          <Typography variant="h5" sx={{ mt: 3 }}>
-            Anmelden
-          </Typography>
+          <Divider sx={{ width: "63%", mt: 2 }}></Divider>
+
           <Box
             sx={{
               display: "flex",
@@ -63,7 +61,7 @@ const LoginMaske = () => {
               alignItems: "center",
               width: "100%",
               borderRadius: 10,
-              mt: 12,
+              mt: 3,
             }}
           >
             <Box
@@ -76,9 +74,16 @@ const LoginMaske = () => {
                 alignItems: "center",
               }}
             >
+              <Typography variant="h5" sx={{ mb: 1, }}>
+                Registrieren
+              </Typography>
               <TextField label="Email" sx={{ width: "80%", mb: 2 }}></TextField>
               <TextField
-                label="Password"
+                label="Passwort"
+                sx={{ width: "80%", mb: 2 }}
+              ></TextField>{" "}
+              <TextField
+                label="Passwort wiederholen"
                 sx={{ width: "80%", mb: 4 }}
               ></TextField>
               <Button
@@ -86,7 +91,7 @@ const LoginMaske = () => {
                 variant="outlined"
                 sx={{ borderRadius: 2, mb: 3, width: "80%" }}
               >
-                Anmelden
+                Registrieren
               </Button>
             </Box>
           </Box>

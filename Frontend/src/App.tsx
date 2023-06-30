@@ -1,6 +1,7 @@
 import LoginMaske from "./components/LoginMaske";
 import LandingPage from "./components/LandingPage";
 import { Box } from "@mui/material";
+import RegistrationMaske from "./components/RegistrationMaske";
 
 export default function App() {
   return (
