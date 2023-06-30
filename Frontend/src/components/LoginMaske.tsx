@@ -76,9 +76,9 @@ const LoginMaske = () => {
                 alignItems: "center",
               }}
             >
-              <TextField label="Email" sx={{ width: "80%", mb: 2 }}></TextField>
+              <TextField label="E-Mail" sx={{ width: "80%", mb: 2 }}></TextField>
               <TextField
-                label="Password"
+                label="Passwort"
                 sx={{ width: "80%", mb: 4 }}
               ></TextField>
               <Button
