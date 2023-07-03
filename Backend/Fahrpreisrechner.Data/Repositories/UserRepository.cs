@@ -23,7 +23,7 @@ public class UserRepository : IUserRepository
     var user = _context.Users.SingleOrDefault(u => u.Email == email);
     if (user == null)
     {
-      throw new UserNotFoundException(); 
+      //throw new UserNotFoundException(); 
     }
     return user;
   }

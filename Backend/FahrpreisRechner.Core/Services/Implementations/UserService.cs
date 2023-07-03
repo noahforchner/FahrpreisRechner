@@ -21,6 +21,7 @@ public class UserService : IUserService
       FirstName = registerDto.FirstName,
       LastName = registerDto.LastName,
       Email = registerDto.Email,
+      PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerDto.Password)
     };
     _userRepository.Create(user);
   }
