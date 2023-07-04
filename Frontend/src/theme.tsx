@@ -1,6 +1,6 @@
-import { createTheme } from '@mui/material/styles';
-import { dark } from '@mui/material/styles/createPalette';
-import './app.css';
+import { createTheme } from "@mui/material/styles";
+import { dark } from "@mui/material/styles/createPalette";
+import "./app.css";
 
 // Create a theme instance.
 const theme = createTheme({
@@ -14,7 +14,7 @@ const theme = createTheme({
   palette: {
     /* mode: "dark", */
     secondary: {
-      main: '#19857b',
+      main: "#19857b",
     },
   },
 });

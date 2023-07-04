@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import Logo from "../assets/Logo.png";
-import Background from "../assets/background2.0.png";
+import Background from "../assets/BackgroundFinal.png";
 
 const LoginMaske = () => {
   return (

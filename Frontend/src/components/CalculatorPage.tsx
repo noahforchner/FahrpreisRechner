@@ -11,10 +11,8 @@ import {
 } from "@mui/material";
 import Logo from "../assets/Logo.png";
 import Background from "../assets/BackgroundFinal.png";
-import { useNavigate } from "react-router-dom";
 
 const LoginMaske = () => {
-  const navigate = useNavigate();
   return (
     <Box
       component="div"
@@ -52,11 +50,11 @@ const LoginMaske = () => {
         >
           <img src={Logo} height={100} width={150}></img>
           <Typography sx={{ textAlign: "center", mt: 2 }} variant="h5">
-            Willkommen bei SooTec
+            Ihren Fahrpreis berechnen
           </Typography>
           <Divider sx={{ width: "63%", mt: 4 }}></Divider>
           <Typography variant="h5" sx={{ mt: 3 }}>
-            Anmelden
+            Strecke in km
           </Typography>
           <Box
             sx={{
@@ -78,23 +76,12 @@ const LoginMaske = () => {
                 alignItems: "center",
               }}
             >
-              <TextField
-                label="E-Mail"
-                sx={{ width: "80%", mb: 2 }}
-              ></TextField>
-              <TextField
-                label="Passwort"
-                sx={{ width: "80%", mb: 4 }}
-              ></TextField>
               <Button
                 size="large"
                 variant="outlined"
                 sx={{ borderRadius: 2, mb: 3, width: "80%" }}
-                onClick={() => {
-                  navigate("/calculator");
-                }}
               >
-                Anmelden
+                Berechnen
               </Button>
             </Box>
           </Box>
