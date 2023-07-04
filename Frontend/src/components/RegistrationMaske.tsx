@@ -44,13 +44,13 @@ const LoginMaske = () => {
             width: "40%",
             minWidth: "500px",
             borderRadius: 5,
-            height: "70%",
-            mt: 17,
+            height: "88%",
+            mt: 6,
           }}
         >
           <img src={Logo} height={100} width={150}></img>
           <Typography sx={{ textAlign: "center", mt: 2 }} variant="h5">
-            Willkommen bei SooTec
+            Willkommen bei ScooTec
           </Typography>
           <Divider sx={{ width: "63%", mt: 2 }}></Divider>
 
@@ -74,9 +74,14 @@ const LoginMaske = () => {
                 alignItems: "center",
               }}
             >
-              <Typography variant="h5" sx={{ mb: 1, }}>
+              <Typography variant="h5" sx={{ mb: 1 }}>
                 Registrieren
               </Typography>
+              <TextField label="Name" sx={{ width: "80%", mb: 2 }}></TextField>
+              <TextField
+                label="Nachname"
+                sx={{ width: "80%", mb: 2 }}
+              ></TextField>
               <TextField label="Email" sx={{ width: "80%", mb: 2 }}></TextField>
               <TextField
                 label="Passwort"
