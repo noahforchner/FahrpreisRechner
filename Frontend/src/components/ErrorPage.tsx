@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import Background from '../assets/background2.0.png';
+import Background from "../assets/BackgroundFinal.png";
 
 function ErrorPage() {
   return (

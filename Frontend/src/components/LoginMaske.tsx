@@ -1,20 +1,12 @@
-import {
-  AppBar,
-  Avatar,
-  Box,
-  Button,
-  Divider,
-  Paper,
-  TextField,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import { Box, Button, Divider, Paper, TextField, Typography } from '@mui/material';
 import Logo from '../assets/Logo.png';
-import Background from '../assets/background2.0.png';
+import Background from '../assets/BackgroundFinal.png';
 import axios from 'axios';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoginMaske = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -116,6 +108,9 @@ const LoginMaske = () => {
                 size="large"
                 variant="outlined"
                 sx={{ borderRadius: 2, mb: 3, width: '80%' }}
+                onClick={() => {
+                  navigate('/calculator');
+                }}
                 onClick={handleClick}
               >
                 Anmelden
