@@ -1,12 +1,9 @@
 import {
-  AppBar,
-  Avatar,
   Box,
   Button,
   Divider,
   Paper,
   TextField,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import Logo from "../assets/Logo.png";
