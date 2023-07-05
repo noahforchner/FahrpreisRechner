@@ -2,6 +2,7 @@ import { Alert, Box, Button, Divider, Paper, Snackbar, Typography } from '@mui/m
 import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
 import { useState } from 'react';
+import Map from './Map';
 
 const LOGIN_FEEDBACK_TEXT = 'Sie wurden erfolgreich eingeloggt.';
 
@@ -19,7 +20,7 @@ const CalculatorPage = () => {
           {LOGIN_FEEDBACK_TEXT}
         </Alert>
       </Snackbar>
-      <Box
+      {/* <Box
         component="div"
         sx={{
           position: 'absolute',
@@ -30,16 +31,18 @@ const CalculatorPage = () => {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
+      > */}
+      <Box
+        sx={{
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            height: '100%',
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-          <Paper
+        {/* <Paper
             elevation={6}
             sx={{
               display: 'flex',
@@ -52,46 +55,43 @@ const CalculatorPage = () => {
               height: '70%',
               mt: 17,
             }}
+          > */}
+        <img src={Logo} height={100} width={150}></img>
+        <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
+          Ihren Fahrpreis berechnen
+        </Typography>
+        <Divider sx={{ width: '63%', mt: 4 }}></Divider>
+        <Map />
+        {/* <Typography variant="h5" sx={{ mt: 3 }}>
+          Strecke in km
+        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: '100%',
+            borderRadius: 10,
+            mt: 12,
+          }}
+        >
+          <Box
+            sx={{
+              width: '80%',
+              alignSelf: 'center',
+              display: 'flex',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
           >
-            <img src={Logo} height={100} width={150}></img>
-            <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
-              Ihren Fahrpreis berechnen
-            </Typography>
-            <Divider sx={{ width: '63%', mt: 4 }}></Divider>
-            <Typography variant="h5" sx={{ mt: 3 }}>
-              Strecke in km
-            </Typography>
-            <Box
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                width: '100%',
-                borderRadius: 10,
-                mt: 12,
-              }}
-            >
-              <Box
-                sx={{
-                  width: '80%',
-                  alignSelf: 'center',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                }}
-              >
-                <Button
-                  size="large"
-                  variant="outlined"
-                  sx={{ borderRadius: 2, mb: 3, width: '80%' }}
-                >
-                  Berechnen
-                </Button>
-              </Box>
-            </Box>
-          </Paper>
-        </Box>
+            <Button size="large" variant="outlined" sx={{ borderRadius: 2, mb: 3, width: '80%' }}>
+              Berechnen
+            </Button>
+          </Box> */}
+        {/* </Box> */}
+        {/* </Paper>
+        </Box> */}
       </Box>
     </>
   );
