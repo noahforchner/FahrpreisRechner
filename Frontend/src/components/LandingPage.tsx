@@ -1,93 +1,111 @@
-import { Box, Button, Divider, Paper, Typography } from "@mui/material";
-import Logo from "../assets/Logo.png";
-import Background from "../assets/BackgroundFinal.png";
-import { useNavigate } from "react-router-dom";
+import { Alert, Box, Button, Divider, Paper, Snackbar, Typography } from '@mui/material';
+import Logo from '../assets/Logo.png';
+import Background from '../assets/BackgroundFinal.png';
+import { useNavigate } from 'react-router-dom';
+import { useUiStore } from '../store';
 
-const LoginMaske = () => {
+const REGISTER_FEEDBACK_TEXT = 'Sie wurden erfolgreich registriert.';
+
+const LandingPage = () => {
+  const hasRegistered = useUiStore((state) => state.hasRegistered);
+  const setHasRegistered = useUiStore((state) => state.setHasRegistered);
   const navigate = useNavigate();
+
+  const handleSnackbarClose = () => {
+    setHasRegistered(false);
+  };
+
   return (
-    <Box
-      component="div"
-      sx={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        backgroundImage: `url(${Background})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <>
+      <Snackbar open={hasRegistered} autoHideDuration={6000} onClose={handleSnackbarClose}>
+        <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+          {REGISTER_FEEDBACK_TEXT}
+        </Alert>
+      </Snackbar>
       <Box
+        component="div"
         sx={{
-          display: "flex",
-          height: "100%",
-          width: "100%",
-          justifyContent: "center",
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url(${Background})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <Paper
-          elevation={6}
+        <Box
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "40%",
-            minWidth: "500px",
-            borderRadius: 5,
-            height: "70%",
-            mt: 17,
+            display: 'flex',
+            height: '100%',
+            width: '100%',
+            justifyContent: 'center',
           }}
         >
-          <img src={Logo} height={100} width={150}></img>
-          <Typography sx={{ textAlign: "center", mt: 2 }} variant="h5">
-            Willkommen bei SooTec
-          </Typography>
-          <Divider sx={{ width: "50%", mt: 4 }}></Divider>
-          <Box
+          <Paper
+            elevation={6}
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              width: "100%",
-              borderRadius: 10,
-              mt: 15,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '40%',
+              minWidth: '500px',
+              borderRadius: 5,
+              height: '70%',
+              mt: 17,
             }}
           >
+            <img src={Logo} height={100} width={150}></img>
+            <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
+              Willkommen bei ScooTec
+            </Typography>
+            <Divider sx={{ width: '50%', mt: 4 }}></Divider>
             <Box
               sx={{
-                width: "80%",
-                alignSelf: "center",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                alignItems: "center",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: '100%',
+                borderRadius: 10,
+                mt: 15,
               }}
             >
-              <Button
-                size="large"
-                variant="outlined"
-                href="/registrierung"
-                sx={{ borderRadius: 2, mb: 3, width: "65%" }}
-              >
-                Registrieren
-              </Button>
-              <Button
-                size="large"
-                variant="outlined"
-                sx={{ borderRadius: 2, mb: 3, width: "65%" }}
-                onClick={() => {
-                  navigate("/login");
+              <Box
+                sx={{
+                  width: '80%',
+                  alignSelf: 'center',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  alignItems: 'center',
                 }}
               >
-                Anmelden
-              </Button>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  href="/registrierung"
+                  sx={{ borderRadius: 2, mb: 3, width: '65%' }}
+                >
+                  Registrieren
+                </Button>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  sx={{ borderRadius: 2, mb: 3, width: '65%' }}
+                  onClick={() => {
+                    navigate('/login');
+                  }}
+                >
+                  Anmelden
+                </Button>
+              </Box>
             </Box>
-          </Box>
-        </Paper>
+          </Paper>
+        </Box>
       </Box>
-    </Box>
+      //{' '}
+    </>
   );
 };
-export default LoginMaske;
+export default LandingPage;

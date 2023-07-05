@@ -31,8 +31,16 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 
 //builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
 
 var app = builder.Build();
+
+app.UseCors(options => options
+  .WithOrigins(new[] { "http://localhost:5173" }) 
+  .AllowAnyHeader()
+  .AllowAnyMethod()
+  .AllowCredentials()
+);
 
 //Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
