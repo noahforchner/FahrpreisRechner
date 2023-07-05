@@ -107,6 +107,7 @@ const LoginMaske = () => {
                 label="E-Mail"
                 sx={{ width: '80%', mb: 2 }}
                 onChange={(e) => handleEmailChange(e)}
+                error={error}
               ></TextField>
               <TextField
                 label="Passwort"
