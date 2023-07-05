@@ -46,11 +46,8 @@ public class AuthController : ControllerBase
       return BadRequest(Constants.INVALID_CREDENTIALS_MESSAGE);
     }
 
-    var jwt = _jwtService.Generate(user.Id);
+    var token = _jwtService.Generate(user.Id);
 
-    return Ok(new
-    {
-      jwt
-    });
+    return Ok(token);
   }
 }
