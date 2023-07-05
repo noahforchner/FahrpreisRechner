@@ -1,14 +1,19 @@
-import { Box, Button, Divider, Paper, TextField, Typography } from '@mui/material';
+import { Alert, Box, Button, Divider, Paper, Snackbar, TextField, Typography } from '@mui/material';
 import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const ERROR_TEXT = 'Die Zugangsdaten sind ungültig.';
+
 const LoginMaske = () => {
   const navigate = useNavigate();
+
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<boolean>(false);
+  const [errorText, setErrorText] = useState<string>('');
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setEmail(e.target.value);
@@ -18,16 +23,20 @@ const LoginMaske = () => {
     setPassword(e.target.value);
   };
 
-  const handleClick = async () => {
+  const handleLoginClick = async () => {
     try {
       const response = await axios.post('https://localhost:443/api/v1/auth/login', {
         email: email,
         password: password,
       });
 
-      localStorage.setItem('fp-token', response.data);
+      localStorage.setItem('fp-token', JSON.stringify(response.data));
+      // Wenn erfolgreich -> navigieren
+      navigate('/calculator');
     } catch (error) {
       console.error(error);
+      setError(true);
+      setErrorText(ERROR_TEXT);
     }
   };
 
@@ -68,7 +77,7 @@ const LoginMaske = () => {
         >
           <img src={Logo} height={100} width={150}></img>
           <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
-            Willkommen bei SooTec
+            Willkommen bei ScooTec
           </Typography>
           <Divider sx={{ width: '63%', mt: 4 }}></Divider>
           <Typography variant="h5" sx={{ mt: 3 }}>
@@ -103,15 +112,15 @@ const LoginMaske = () => {
                 label="Passwort"
                 sx={{ width: '80%', mb: 4 }}
                 onChange={(e) => handlePasswordChange(e)}
+                type="password"
+                error={error}
+                helperText={errorText}
               ></TextField>
               <Button
                 size="large"
                 variant="outlined"
                 sx={{ borderRadius: 2, mb: 3, width: '80%' }}
-                onClick={() => {
-                  navigate('/calculator');
-                }}
-                onClick={handleClick}
+                onClick={handleLoginClick}
               >
                 Anmelden
               </Button>

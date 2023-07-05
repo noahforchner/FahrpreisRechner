@@ -1,9 +1,9 @@
-import LoginMaske from "./components/LoginMaske";
-import LandingPage from "./components/LandingPage";
-import RegistrationMaske from "./components/RegistrationMaske";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ErrorPage from "./components/ErrorPage";
-import CalculatorPage from "./components/CalculatorPage";
+import LoginMaske from './components/LoginMaske';
+import LandingPage from './components/LandingPage';
+import RegistrationMaske from './components/RegistrationMaske';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ErrorPage from './components/ErrorPage';
+import CalculatorPage from './components/CalculatorPage';
 
 export default function App() {
   return (
