@@ -3,6 +3,8 @@ import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
 import { useState } from 'react';
 import Map from './Map';
+import RouteSelect from './RouteSelect';
+import { useLoadScript } from '@react-google-maps/api';
 
 const LOGIN_FEEDBACK_TEXT = 'Sie wurden erfolgreich eingeloggt.';
 
@@ -61,7 +63,7 @@ const CalculatorPage = () => {
           Ihren Fahrpreis berechnen
         </Typography>
         <Divider sx={{ width: '63%', mt: 4 }}></Divider>
-        <Map />
+        <RouteSelect />
         {/* <Typography variant="h5" sx={{ mt: 3 }}>
           Strecke in km
         </Typography>
