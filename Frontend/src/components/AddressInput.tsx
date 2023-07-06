@@ -1,11 +1,13 @@
 import { Autocomplete, TextField } from '@mui/material';
-import usePlacesAutocomplete from 'use-places-autocomplete';
+import { SyntheticEvent } from 'react';
+import usePlacesAutocomplete, { LatLng, getGeocode, getLatLng } from 'use-places-autocomplete';
 
 interface AddressInputProps {
   label: string;
+  setSelected: React.Dispatch<React.SetStateAction<LatLng | undefined>>;
 }
 
-const AddressInput = ({ label }: AddressInputProps) => {
+const AddressInput = ({ label, setSelected }: AddressInputProps) => {
   const {
     ready,
     value,
@@ -13,6 +15,17 @@ const AddressInput = ({ label }: AddressInputProps) => {
     suggestions: { status, data },
     clearSuggestions,
   } = usePlacesAutocomplete();
+
+  const handleSelect = async (e: SyntheticEvent<Element, Event>, address: string | null) => {
+    if (address) {
+      setValue(address, false);
+    }
+    clearSuggestions();
+
+    const results = await getGeocode({ address });
+    const { lat, lng } = await getLatLng(results[0]);
+    setSelected({ lat, lng });
+  };
 
   return (
     <>
@@ -32,7 +45,7 @@ const AddressInput = ({ label }: AddressInputProps) => {
           />
         )}
         onInputChange={(e, value) => setValue((e.target as HTMLTextAreaElement).value)}
-        onChange={(e, address) => console.log(address)}
+        onChange={(e, address) => handleSelect(e, address)}
         disabled={!ready}
       />
     </>

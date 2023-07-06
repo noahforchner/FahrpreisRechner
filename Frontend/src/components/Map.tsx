@@ -1,16 +1,27 @@
-import { SyntheticEvent } from 'react';
-import usePlacesAutocomplete, { HookReturn, getGeocode, getLatLng } from 'use-places-autocomplete';
+import { SyntheticEvent, useState } from 'react';
+import usePlacesAutocomplete, {
+  HookReturn,
+  LatLng,
+  getGeocode,
+  getLatLng,
+} from 'use-places-autocomplete';
 import AddressInput from './AddressInput';
 import { useMemo } from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
 const Map = () => {
   const center = useMemo(() => ({ lat: 53.52, lng: 10 }), []);
+  const [selectedStart, setSelectedStart] = useState<LatLng>();
+  const [selectedDestination, setSelectedDestination] = useState<LatLng>();
 
   return (
     <>
-      <AddressInput label="Startaddresse" />
-      <GoogleMap zoom={10} center={center} mapContainerClassName="map-container" />
+      <AddressInput label="Startaddresse" setSelected={setSelectedStart} />
+      <AddressInput label="Zieladdresse" setSelected={setSelectedDestination} />
+      <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
+        {selectedStart && <Marker position={selectedStart} />}
+        {selectedDestination && <Marker position={selectedDestination} />}
+      </GoogleMap>
     </>
   );
   // const {
