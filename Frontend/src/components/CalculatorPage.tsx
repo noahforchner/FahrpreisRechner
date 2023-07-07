@@ -65,7 +65,7 @@ const CalculatorPage = () => {
         }}
       >
         <AppBar
-          position="static"
+          position="sticky"
           sx={{ background: "transparent", boxShadow: "none", width: "100%" }}
         >
           <Toolbar>
@@ -83,7 +83,7 @@ const CalculatorPage = () => {
         <Box
           sx={{
             display: "flex",
-            height: "100%",
+            height: "92%",
             width: "100%",
             justifyContent: "center",
           }}
