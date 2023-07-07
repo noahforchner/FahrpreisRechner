@@ -2,9 +2,7 @@ import { Alert, Box, Button, Divider, Paper, Snackbar, Typography } from '@mui/m
 import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
 import { useState } from 'react';
-import Map from './Map';
 import RouteSelect from './RouteSelect';
-import { useLoadScript } from '@react-google-maps/api';
 
 const LOGIN_FEEDBACK_TEXT = 'Sie wurden erfolgreich eingeloggt.';
 

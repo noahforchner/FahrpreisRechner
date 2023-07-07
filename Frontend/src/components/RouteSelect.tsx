@@ -1,4 +1,4 @@
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { useLoadScript } from '@react-google-maps/api';
 import Map from './Map';
 
 const RouteSelect = () => {

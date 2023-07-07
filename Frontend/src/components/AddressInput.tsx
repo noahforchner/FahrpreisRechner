@@ -1,4 +1,4 @@
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, Box, Grid, TextField, Typography } from '@mui/material';
 import { SyntheticEvent } from 'react';
 import usePlacesAutocomplete, { LatLng, getGeocode, getLatLng } from 'use-places-autocomplete';
 
@@ -32,7 +32,7 @@ const AddressInput = ({ label, setSelected }: AddressInputProps) => {
       <Autocomplete
         sx={{ width: '500px', marginTop: '30px' }}
         //value={value}
-        // freeSolo
+        freeSolo
         options={data.map((option) => option.description)}
         renderInput={(params) => (
           <TextField
