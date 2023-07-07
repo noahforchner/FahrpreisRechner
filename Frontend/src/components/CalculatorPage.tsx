@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Logo from "../assets/Logo.png";
 import Background from "../assets/BackgroundFinal.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LOGIN_FEEDBACK_TEXT = "Sie wurden erfolgreich eingeloggt.";
@@ -23,6 +23,17 @@ const CalculatorPage = () => {
   const handleSnackbarClose = () => {
     setIsSnackbarOpen(false);
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem("fp-token");
+    navigate("/");
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("fp-token") === null) {
+      navigate("/");
+    }
+  }, []);
 
   const navigate = useNavigate();
 
@@ -62,12 +73,7 @@ const CalculatorPage = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               ScooTec
             </Typography>
-            <Button
-              color="inherit"
-              onClick={() => {
-                navigate("/");
-              }}
-            >
+            <Button color="inherit" onClick={handleLogout}>
               {" "}
               <Avatar sx={{ height: "3vh", width: "3vh", mr: 1 }}></Avatar>
               Logout
