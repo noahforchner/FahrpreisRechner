@@ -1,4 +1,4 @@
-import { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useRef, useState } from 'react';
 import usePlacesAutocomplete, {
   HookReturn,
   LatLng,
@@ -7,20 +7,76 @@ import usePlacesAutocomplete, {
 } from 'use-places-autocomplete';
 import AddressInput from './AddressInput';
 import { useMemo } from 'react';
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import {
+  GoogleMap,
+  useLoadScript,
+  Marker,
+  DirectionsService,
+  DirectionsRenderer,
+} from '@react-google-maps/api';
 
 const Map = () => {
   const center = useMemo(() => ({ lat: 53.52, lng: 10 }), []);
   const [selectedStart, setSelectedStart] = useState<LatLng>();
   const [selectedDestination, setSelectedDestination] = useState<LatLng>();
+  //const directionsResult = useRef<google.maps.DirectionsResult>();
+  const [directionsResult, setDirectionsResult] = useState<google.maps.DirectionsResult>();
+  const [serviceRan, setServiceRan] = useState<number>(0);
+  const [routeDistance, setRouteDistance] = useState(0);
+  const [routeDuration, setRouteDuration] = useState(0);
+
+  const directionsCallback = (
+    result: google.maps.DirectionsResult | null,
+    status: google.maps.DirectionsStatus
+  ) => {
+    if (result) {
+      if (status === 'OK') {
+        //directionsResult.current = result;
+        setDirectionsResult(result);
+        setServiceRan(serviceRan + 1);
+        //if (serviceRan === 2) {
+        let distance = 0;
+        let duration = 0;
+        result.routes.forEach((r) =>
+          r.legs.forEach((l) => {
+            if (l.distance?.value) {
+              distance += l.distance.value;
+            }
+            if (l.duration?.value) {
+              duration += l.duration.value;
+            }
+          })
+        );
+        setRouteDistance(distance);
+        setRouteDuration(duration);
+        console.log(JSON.stringify(result));
+
+        //calculatePrice(distance, duration);
+        //}
+      }
+    }
+  };
 
   return (
     <>
       <AddressInput label="Startaddresse" setSelected={setSelectedStart} />
       <AddressInput label="Zieladdresse" setSelected={setSelectedDestination} />
       <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
-        {selectedStart && <Marker position={selectedStart} />}
-        {selectedDestination && <Marker position={selectedDestination} />}
+        {/* {selectedStart && <Marker position={selectedStart} />}
+        {selectedDestination && <Marker position={selectedDestination} />} */}
+        {selectedStart && selectedDestination && serviceRan < 3 && (
+          <DirectionsService
+            options={{
+              origin: selectedStart,
+              destination: selectedDestination,
+              travelMode: google.maps.TravelMode.BICYCLING,
+            }}
+            callback={directionsCallback}
+          />
+        )}
+        {directionsResult !== undefined && (
+          <DirectionsRenderer options={{ directions: directionsResult }} />
+        )}
       </GoogleMap>
     </>
   );
