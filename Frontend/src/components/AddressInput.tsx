@@ -40,7 +40,6 @@ const AddressInput = ({ label, setSelected }: AddressInputProps) => {
             label={label}
             InputProps={{
               ...params.InputProps,
-              type: 'search',
             }}
           />
         )}
