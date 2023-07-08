@@ -3,6 +3,7 @@ import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
 import { useState } from 'react';
 import RouteSelect from './RouteSelect';
+import { Container } from '@mui/system';
 
 const LOGIN_FEEDBACK_TEXT = 'Sie wurden erfolgreich eingeloggt.';
 
@@ -15,34 +16,45 @@ const CalculatorPage = () => {
 
   return (
     <>
-      <Snackbar open={isSnackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
-        <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
-          {LOGIN_FEEDBACK_TEXT}
-        </Alert>
-      </Snackbar>
-      {/* <Box
-        component="div"
+      <Container
         sx={{
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
+          height: '100vh',
+          width: '100vw',
           backgroundImage: `url(${Background})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
         }}
-      > */}
-      <Box
-        sx={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
+        maxWidth={false}
       >
-        {/* <Paper
+        <Snackbar open={isSnackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
+          <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+            {LOGIN_FEEDBACK_TEXT}
+          </Alert>
+        </Snackbar>
+        {/* <Box
+          component="div"
+          sx={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${Background})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        > */}
+        <Box
+          sx={{
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          {/* <Paper
             elevation={6}
             sx={{
               display: 'flex',
@@ -56,13 +68,13 @@ const CalculatorPage = () => {
               mt: 17,
             }}
           > */}
-        <img src={Logo} height={100} width={150}></img>
-        <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
-          Ihren Fahrpreis berechnen
-        </Typography>
-        <Divider sx={{ width: '63%', mt: 4 }}></Divider>
-        <RouteSelect />
-        {/* <Typography variant="h5" sx={{ mt: 3 }}>
+          {/* <img src={Logo} height={100} width={150}></img>
+          <Typography sx={{ textAlign: 'center', mt: 2 }} variant="h5">
+            Ihren Fahrpreis berechnen
+          </Typography>
+          <Divider sx={{ width: '63%', mt: 4 }}></Divider> */}
+          <RouteSelect />
+          {/* <Typography variant="h5" sx={{ mt: 3 }}>
           Strecke in km
         </Typography>
         <Box
@@ -89,10 +101,11 @@ const CalculatorPage = () => {
               Berechnen
             </Button>
           </Box> */}
+          {/* </Box> */}
+          {/* </Paper> */}
+        </Box>
         {/* </Box> */}
-        {/* </Paper>
-        </Box> */}
-      </Box>
+      </Container>
     </>
   );
 };

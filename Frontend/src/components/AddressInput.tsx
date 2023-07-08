@@ -1,13 +1,16 @@
 import { Autocomplete, Box, Grid, TextField, Typography } from '@mui/material';
 import { SyntheticEvent } from 'react';
 import usePlacesAutocomplete, { LatLng, getGeocode, getLatLng } from 'use-places-autocomplete';
+import { LocationType } from '../types';
+import { useUiStore } from '../store';
 
 interface AddressInputProps {
   label: string;
   setSelected: React.Dispatch<React.SetStateAction<LatLng | undefined>>;
+  locationType: LocationType;
 }
 
-const AddressInput = ({ label, setSelected }: AddressInputProps) => {
+const AddressInput = ({ label, setSelected, locationType }: AddressInputProps) => {
   const {
     ready,
     value,
@@ -16,9 +19,16 @@ const AddressInput = ({ label, setSelected }: AddressInputProps) => {
     clearSuggestions,
   } = usePlacesAutocomplete();
 
+  const uiStore = useUiStore();
+
   const handleSelect = async (e: SyntheticEvent<Element, Event>, address: string | null) => {
     if (address) {
       setValue(address, false);
+      if (locationType === LocationType.Start) {
+        uiStore.setStartLocation(address);
+      } else {
+        uiStore.setDestinationLocation(address);
+      }
     }
     clearSuggestions();
 
@@ -30,7 +40,10 @@ const AddressInput = ({ label, setSelected }: AddressInputProps) => {
   return (
     <>
       <Autocomplete
-        sx={{ width: '500px', marginTop: '30px' }}
+        sx={{
+          width: '100%',
+          backgroundColor: '#ffffff',
+        }}
         //value={value}
         freeSolo
         options={data.map((option) => option.description)}
