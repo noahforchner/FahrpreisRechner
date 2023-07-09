@@ -1,9 +1,21 @@
-import { Alert, Box, Button, Divider, Paper, Snackbar, Typography } from '@mui/material';
+import {
+  Alert,
+  AppBar,
+  Avatar,
+  Box,
+  Button,
+  Divider,
+  Paper,
+  Snackbar,
+  Toolbar,
+  Typography,
+} from '@mui/material';
 import Logo from '../assets/Logo.png';
 import Background from '../assets/BackgroundFinal.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import RouteSelect from './RouteSelect';
 import { Container } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const LOGIN_FEEDBACK_TEXT = 'Sie wurden erfolgreich eingeloggt.';
 
@@ -12,6 +24,12 @@ const CalculatorPage = () => {
 
   const handleSnackbarClose = () => {
     setIsSnackbarOpen(false);
+  };
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('fp-token');
+    navigate('/');
   };
 
   return (
@@ -27,8 +45,16 @@ const CalculatorPage = () => {
         }}
         maxWidth={false}
       >
-        <Snackbar open={isSnackbarOpen} autoHideDuration={6000} onClose={handleSnackbarClose}>
-          <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+        <Snackbar
+          open={isSnackbarOpen}
+          autoHideDuration={6000}
+          onClose={handleSnackbarClose}
+        >
+          <Alert
+            onClose={handleSnackbarClose}
+            severity='success'
+            sx={{ width: '100%' }}
+          >
             {LOGIN_FEEDBACK_TEXT}
           </Alert>
         </Snackbar>
@@ -54,6 +80,27 @@ const CalculatorPage = () => {
             alignItems: 'center',
           }}
         >
+          <AppBar
+            position='sticky'
+            sx={{
+              background: 'transparent',
+              boxShadow: 'none',
+              width: '100%',
+              mb: -3,
+            }}
+          >
+            <Toolbar>
+              {' '}
+              <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
+                ScooTec
+              </Typography>
+              <Button color='inherit' onClick={handleLogout}>
+                {' '}
+                <Avatar sx={{ height: '3vh', width: '3vh', mr: 1 }}></Avatar>
+                Logout
+              </Button>
+            </Toolbar>
+          </AppBar>
           {/* <Paper
             elevation={6}
             sx={{

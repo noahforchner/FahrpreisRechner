@@ -10,10 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
-    "@mui/material": "latest",
+    "@mui/material": "^5.13.7",
     "@react-google-maps/api": "^2.18.1",
     "@types/googlemaps": "^3.43.3",
     "axios": "^1.4.0",
