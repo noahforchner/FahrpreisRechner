@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FahrpreisRechner.Core", "..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fahrpreisrechner.Data", "..\Fahrpreisrechner.Data\Fahrpreisrechner.Data.csproj", "{B1B52007-4226-4318-9524-F3370E22DA58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FahrpreisRechner.API.Tests", "..\FahrpreisRechner.API.Tests\FahrpreisRechner.API.Tests.csproj", "{6027B520-4A15-464D-8C1C-6C1F9A44D3DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FahrpreisRechner.Core.Tests", "..\FahrpreisRechner.Core.Tests\FahrpreisRechner.Core.Tests.csproj", "{1ABE3845-F6E9-4A4C-B300-ABE14563A102}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{B1B52007-4226-4318-9524-F3370E22DA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1B52007-4226-4318-9524-F3370E22DA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1B52007-4226-4318-9524-F3370E22DA58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6027B520-4A15-464D-8C1C-6C1F9A44D3DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6027B520-4A15-464D-8C1C-6C1F9A44D3DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6027B520-4A15-464D-8C1C-6C1F9A44D3DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6027B520-4A15-464D-8C1C-6C1F9A44D3DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ABE3845-F6E9-4A4C-B300-ABE14563A102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ABE3845-F6E9-4A4C-B300-ABE14563A102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ABE3845-F6E9-4A4C-B300-ABE14563A102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ABE3845-F6E9-4A4C-B300-ABE14563A102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
