@@ -14,4 +14,7 @@ public class User
 
   [JsonIgnore]
   public string PasswordHash { get; set; }
+
+  [JsonIgnore]
+  public ICollection<Route> Routes { get; } = new List<Route>();
 }
