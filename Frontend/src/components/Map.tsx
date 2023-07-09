@@ -12,7 +12,7 @@ import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import CalculationResult from './CalculationResult';
 
-const center = { lat: 53.52, lng: 10 };
+const center = { lat: 53.55, lng: 10.02 };
 const googleMapsApiKey: string = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const parseLocation = (coordinates: LatLng | undefined) => {
@@ -37,7 +37,7 @@ const Map = () => {
   const embedUrl = `https://www.google.com/maps/embed/v1`;
   const viewUrl = `${embedUrl}/view?key=${googleMapsApiKey}&center=${parseLocation(
     center
-  )}&zoom=10`;
+  )}&zoom=11`;
   const placeUrl = `${embedUrl}/place?key=${googleMapsApiKey}&q=${
     startLocation || destinationLocation
   }`;

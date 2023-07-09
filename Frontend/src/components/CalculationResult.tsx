@@ -23,7 +23,7 @@ const CalculationResult = ({ duration, durationText, distanceText }: Calculation
       }
     }
     fetchPrice();
-  }, []);
+  }, [distanceText]);
 
   return (
     <>
