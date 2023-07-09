@@ -4,7 +4,7 @@ import AddressInput from './AddressInput';
 import { LocationType } from '../types';
 import { useUiStore } from '../store';
 import axios from 'axios';
-import { Stack, flexbox, height, width } from '@mui/system';
+import { Stack, display, flexbox, height, width } from '@mui/system';
 import { Box, Button, Divider, Grid, Paper, Typography } from '@mui/material';
 import Logo from '../assets/Logo.png';
 import TripOriginIcon from '@mui/icons-material/TripOrigin';
@@ -135,7 +135,7 @@ const Map = () => {
             <Divider sx={{ width: '63%', mt: 4, mb: 4 }}></Divider>
 
             <Grid container alignItems={'center'} spacing={3} mb="20px">
-              <Grid item xs={1}>
+              <Grid item xs={1} sx={{ display: 'flex', alignItems: 'center' }}>
                 <TripOriginIcon fontSize="small" sx={{ marginRight: '10px', color: '#616161' }} />
               </Grid>
               <Grid item xs={10}>
@@ -146,7 +146,7 @@ const Map = () => {
                 />
               </Grid>
               <Grid item xs={1} />
-              <Grid item xs={1}>
+              <Grid item xs={1} sx={{ display: 'flex', alignItems: 'center' }}>
                 <FmdGoodOutlinedIcon
                   fontSize="small"
                   sx={{ marginRight: '10px', color: '#e53935' }}
@@ -160,7 +160,7 @@ const Map = () => {
                 />
               </Grid>
               <Grid item xs={1} />
-              <Grid item xs={1}>
+              <Grid item xs={1} sx={{ display: 'flex', alignItems: 'center' }}>
                 <MonetizationOnOutlinedIcon fontSize="small" color={'primary'} />
               </Grid>
               <Grid item xs={10}>
