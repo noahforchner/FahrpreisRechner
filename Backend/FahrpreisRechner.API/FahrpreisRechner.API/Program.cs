@@ -29,8 +29,9 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<IPriceService, PriceService>();
 
-//builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 var app = builder.Build();
@@ -43,11 +44,11 @@ app.UseCors(options => options
 );
 
 //Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//  app.UseSwagger();
-//  app.UseSwaggerUI();
-//}
+if (app.Environment.IsDevelopment())
+{
+  app.UseSwagger();
+  app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
 

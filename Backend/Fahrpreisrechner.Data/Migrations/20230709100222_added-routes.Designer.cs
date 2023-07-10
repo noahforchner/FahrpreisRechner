@@ -4,6 +4,7 @@ using Fahrpreisrechner.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fahrpreisrechner.Data.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20230709100222_added-routes")]
+    partial class addedroutes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,8 +58,6 @@ namespace Fahrpreisrechner.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Routes");
                 });
 
@@ -88,20 +89,6 @@ namespace Fahrpreisrechner.Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("FahrpreisRechner.Core.Entities.Route", b =>
-                {
-                    b.HasOne("FahrpreisRechner.Core.Entities.User", null)
-                        .WithMany("Routes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("FahrpreisRechner.Core.Entities.User", b =>
-                {
-                    b.Navigation("Routes");
                 });
 #pragma warning restore 612, 618
         }
